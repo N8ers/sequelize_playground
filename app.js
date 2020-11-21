@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const app = require('./express/app');
 const sequelize = require('./sequelize');
 

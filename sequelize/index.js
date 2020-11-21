@@ -1,8 +1,11 @@
 const { Sequelize } = require('sequelize');
 
 // connect to the database
-const sequelize = new Sequelize('sequelize_sandbox_v1', 'postgres', '2345', {
-  host: 'localhost',
+const sequelize = new Sequelize({
+  databse: process.env.DATABASE,
+  username: 'postgres',
+  password: process.env.PASSWORD,
+  host: process.env.HOST,
   dialect: 'postgres',
 });
 
