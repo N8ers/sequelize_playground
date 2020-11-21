@@ -1,7 +1,13 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const User = sequelize.define('user', {
+  const Author = sequelize.define('Author', {
+    id: {
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+      type: DataTypes.INTEGER,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -10,5 +16,5 @@ module.exports = (sequelize) => {
     freezeTableName: true,
   });
 
-  return User;
+  return Author;
 };
