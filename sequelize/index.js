@@ -13,6 +13,7 @@ const modelDefiners = [
   require('./models/user.model'),
   require('./models/instrument.model'),
   require('./models/authors.model'),
+  require('./models/books.model'),
 ];
 
 // define all models according to their files
