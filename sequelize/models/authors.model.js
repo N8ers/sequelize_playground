@@ -14,7 +14,12 @@ module.exports = (sequelize) => {
     },
   }, {
     freezeTableName: true,
+    timestamps: false,
   });
+
+  Author.associate = (models) => {
+    Author.hasMany(models.books);
+  };
 
   return Author;
 };

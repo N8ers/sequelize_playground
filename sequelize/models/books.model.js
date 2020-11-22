@@ -14,7 +14,14 @@ module.exports = (sequelize) => {
     },
   }, {
     freezeTableName: true,
+    timestamps: false,
   });
+
+  Book.associate = (models) => {
+    Book.belongsTo(models.author, {
+      foreignKey: 'authorId',
+    });
+  };
 
   return Book;
 };
