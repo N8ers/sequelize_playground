@@ -19,6 +19,9 @@ module.exports = (sequelize) => {
 
   Book.associate = (models) => {
     Book.belongsTo(models.author, {
+      through: {
+        model: models.BookAuthors,
+      },
       foreignKey: 'authorId',
     });
   };
